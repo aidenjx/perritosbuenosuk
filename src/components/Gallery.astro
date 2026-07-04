@@ -2,23 +2,27 @@
 
 ---
 
-<section class="gallery">
-    <h2>Galeria en mantenimiento...</h2>
-</section>
+<div class="gallery">
+    <h2>La Blasgeria</h2>
+    <img
+        src="https://cdn.discordapp.com/attachments/1476792345272782931/1520405589153419315/IMG20260620140622.jpg?ex=6a4a4e0c&is=6a48fc8c&hm=d2e07b71eac362137331bd7f26b5648c764de3df0e76ff8e988abd37ce7dcb38&"
+        alt="Murcielago de blas"
+    />
+
+    <img
+        src="https://cdn.discordapp.com/attachments/1476792345272782931/1520402276743778374/rn_image_picker_lib_temp_0079d0de-f3a2-41c1-babf-0a29d17133fe.jpg?ex=6a4a4af6&is=6a48f976&hm=590a356d1f37a00a712dd8ddbff94ab7f6fdf82c1e0eefb3a57d872e852d0269&"
+        alt="Pared de blas"
+    />
+</div>
 
 <style>
     .gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        max-width: 1200px;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
-
     .gallery img {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        border: 3px solid firebrick;
+        width: 20%;
+        height: auto;
     }
 </style>
