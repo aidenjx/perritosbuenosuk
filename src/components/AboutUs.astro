@@ -2,42 +2,87 @@
 
 ---
 
-<section class="aboutus">
-    <div class="content">
-        <h2>Quienes somos</h2>
-        <p>
-            Somos unos perritos muy buenos. Dentro del servidor de Tony nos
-            encontraras como los perritos mas activos del servidor. Tony todavía
-            no sabe que esto existe, por lo que no estamos afiliados con el de
-            ninguna manera. Queremos nuestro servidor de Matrix
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section-title">Quiénes somos</h2>
+    <div class="about-grid">
+      <div class="card about-card">
+        <div class="about-icon" aria-hidden="true">🐾</div>
+        <p class="about-text">
+          Somos unos <strong>perritos muy buenos</strong>. Dentro del servidor de
+          Tony nos encontrarás como los perritos más activos del servidor. Tony
+          todavía no sabe que esto existe, por lo que no estamos afiliados con él
+          de ninguna manera.
         </p>
+        <p class="about-text">
+          <strong>Queremos nuestro servidor de Matrix.</strong>
+        </p>
+      </div>
 
-        <h2>Inversores principales</h2>
-        <ul>
-            <li>Blas</li>
+      <div class="card about-card">
+        <div class="about-icon" aria-hidden="true">⭐</div>
+        <h3 class="about-subtitle">Inversores principales</h3>
+        <ul class="investor-list">
+          <li>Blas</li>
         </ul>
+      </div>
     </div>
+  </div>
 </section>
 
 <style>
-    h2 {
-        font-size: 2rem;
+  .about-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+
+  .about-card {
+    text-align: center;
+  }
+
+  .about-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-text {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .about-text:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .investor-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .investor-list li {
+    background: #f0f0f0;
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 40rem) {
+    .about-grid {
+      grid-template-columns: 1fr 1fr;
     }
-    p,
-    span,
-    li {
-        font-size: 1.1rem;
-    }
-    .aboutus {
-        display: flex;
-        justify-content: center;
-        padding: 2rem;
-        font-family:
-            system-ui,
-            -apple-system,
-            sans-serif;
-    }
-    .content {
-        padding: 1.5rem;
-    }
+  }
 </style>

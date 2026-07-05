@@ -2,27 +2,67 @@
 
 ---
 
-<div class="gallery">
-    <h2>La Blasgeria</h2>
-    <img
-        src="https://cdn.discordapp.com/attachments/1476792345272782931/1520405589153419315/IMG20260620140622.jpg?ex=6a4a4e0c&is=6a48fc8c&hm=d2e07b71eac362137331bd7f26b5648c764de3df0e76ff8e988abd37ce7dcb38&"
-        alt="Murcielago de blas"
-    />
-
-    <img
-        src="https://cdn.discordapp.com/attachments/1476792345272782931/1520402276743778374/rn_image_picker_lib_temp_0079d0de-f3a2-41c1-babf-0a29d17133fe.jpg?ex=6a4a4af6&is=6a48f976&hm=590a356d1f37a00a712dd8ddbff94ab7f6fdf82c1e0eefb3a57d872e852d0269&"
-        alt="Pared de blas"
-    />
-</div>
+<section class="section" id="gallery">
+    <div class="container">
+        <h2 class="section-title">La Blasgería</h2>
+        <div class="gallery-grid">
+            <figure class="gallery-item card">
+                <img
+                    src="https://cdn.discordapp.com/attachments/1476792345272782931/1520405589153419315/IMG20260620140622.jpg?ex=6a4b9f8c&is=6a4a4e0c&hm=f287b3278d5150c645273fc99946659c8513c5ab934fc7343b7df07dba010bc9&"
+                    alt="Murciélago de Blas"
+                    loading="lazy"
+                />
+                <figcaption>Murciélago de Blas</figcaption>
+            </figure>
+            <figure class="gallery-item card">
+                <img
+                    src="https://cdn.discordapp.com/attachments/1476792345272782931/1520402276743778374/rn_image_picker_lib_temp_0079d0de-f3a2-41c1-babf-0a29d17133fe.jpg?ex=6a4b9c76&is=6a4a4af6&hm=e01052410984192cc4ceea82d6e8726fc9dd7f726e018aff0279e25b96ef0c9c&"
+                    alt="Pared de Blas"
+                    loading="lazy"
+                />
+                <figcaption>Pared de Blas</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
 
 <style>
-    .gallery {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+    .gallery-grid {
+        display: grid;
+        gap: 1.5rem;
+        max-width: 48rem;
+        margin: 0 auto;
     }
-    .gallery img {
-        width: 20%;
-        height: auto;
+
+    .gallery-item {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+        display: block;
+        transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.03);
+    }
+
+    .gallery-item figcaption {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+        text-align: center;
+        font-style: italic;
+    }
+
+    @media (min-width: 40rem) {
+        .gallery-grid {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 </style>

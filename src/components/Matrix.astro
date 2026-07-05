@@ -2,46 +2,61 @@
 
 ---
 
-<section class="matrix">
-    <h2>Nuestro servidor de matrix!</h2>
-    <a href="#">
-        <button>Unete ya!</button>
-        <span>No disponible aun</span>
-    </a>
+<section class="section matrix-section" id="matrix">
+  <div class="container">
+    <div class="matrix-card card">
+      <div class="matrix-icon" aria-hidden="true">💬</div>
+      <h2 class="matrix-title">Nuestro servidor de Matrix</h2>
+      <p class="matrix-desc">
+        Únete a la comunidad de perritos buenos. Charla, memes y mucho más.
+      </p>
+      <div class="matrix-actions">
+        <button class="btn btn-primary btn-disabled" disabled>
+          Únete ya
+        </button>
+        <span class="matrix-notice">No disponible aún</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
-    .matrix {
-        font-size: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 2rem;
-        border: 1px solid #eaeaea;
-        border-radius: 8px;
-    }
+  .matrix-section {
+    background: linear-gradient(180deg, var(--color-bg) 0%, #f0f0f0 100%);
+  }
 
-    .matrix a {
-        font-size: 1.5rem;
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
+  .matrix-card {
+    max-width: 32rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: clamp(2rem, 4vw, 3rem);
+  }
 
-    .matrix button {
-        padding: 1rem;
-        cursor: pointer;
-        color: white;
-        background-color: firebrick;
-        border-radius: 7px;
-    }
+  .matrix-icon {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+  }
 
-    .matrix span {
-        font-size: 0.85rem;
-        color: #666;
-        text-decoration: underline;
-    }
+  .matrix-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .matrix-desc {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  .matrix-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .matrix-notice {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    font-style: italic;
+  }
 </style>

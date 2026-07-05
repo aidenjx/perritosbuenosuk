@@ -10,14 +10,46 @@ import Matrix from "../components/Matrix.astro";
 
 <!doctype html>
 <html lang="es">
-    <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    </head>
-    <body>
-        <Header />
-        <Hero />
-        <AboutUs />
-        <Matrix />
-        <Gallery />
-    </body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <a href="#main" class="sr-only">Ir al contenido principal</a>
+
+    <Header />
+
+    <main id="main">
+      <Hero />
+      <AboutUs />
+      <Matrix />
+      <Gallery />
+    </main>
+
+    <footer class="site-footer section">
+      <div class="container">
+        <div class="footer-inner">
+          <span class="footer-text">
+            &copy; {new Date().getFullYear()} {SITE_TITLE} &mdash; Perritos
+            buenos, honrados e inteligentes
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
+
+<style>
+  .site-footer {
+    background: var(--color-primary-dark);
+    padding: 2rem 0 !important;
+  }
+
+  .footer-inner {
+    text-align: center;
+  }
+
+  .footer-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+  }
+</style>

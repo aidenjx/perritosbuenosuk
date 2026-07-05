@@ -1,54 +1,72 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header>
-    <nav>
-        <h2><a href="/">{SITE_TITLE}</a></h2>
-        <div class="internal-links">
-            <HeaderLink href="/">Matrix (Proximamente)</HeaderLink>
-        </div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">{SITE_TITLE}</a>
+    <nav class="nav">
+      <a href="#about">Quiénes somos</a>
+      <a href="#matrix">Matrix</a>
+      <a href="#gallery">Galería</a>
     </nav>
+  </div>
 </header>
-<style>
-    header {
-        margin: 0;
-        padding: 0 1em;
-        background: white;
-        box-shadow: 0 2px 8px rgba(var(--black), 5%);
-    }
-    h2 {
-        margin: 0;
-        font-size: 1rem;
-    }
 
-    h2 a,
-    h2 a.active {
-        text-decoration: none;
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .logo:hover {
+    color: var(--color-primary);
+  }
+
+  .nav {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .nav a {
+    padding: 0.5rem 0.75rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.925rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .nav a:hover {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 40rem) {
+    .nav a {
+      font-size: 0.825rem;
+      padding: 0.4rem 0.5rem;
     }
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    nav a {
-        padding: 1em 0.5em;
-        color: var(--black);
-        border-bottom: 4px solid transparent;
-        text-decoration: none;
-    }
-    nav a.active {
-        text-decoration: none;
-        border-bottom-color: var(--accent);
-    }
-    .social-links,
-    .social-links a {
-        display: flex;
-    }
-    @media (max-width: 720px) {
-        .social-links {
-            display: none;
-        }
-    }
+  }
 </style>
