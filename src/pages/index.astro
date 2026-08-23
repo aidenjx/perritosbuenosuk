@@ -21,14 +21,14 @@ import Matrix from "../components/Matrix.astro";
         <main id="main">
             <Hero />
             <AboutUs />
-            <Matrix />
             <Gallery />
 
             <section class="section mxlinux-section">
                 <div class="container mxlinux-container">
                     <h2 class="mxlinux-title">Odiamos MX Linux</h2>
                     <p class="mxlinux-desc">
-                        Una distribución que no recomendamos para nada. Lee por qué.
+                        Una distribución que no recomendamos para nada. Lee por
+                        qué.
                     </p>
                     <a
                         href="https://dev.to/kailyons/i-hate-mx-linux-distro-rant-ag8"
@@ -69,7 +69,12 @@ import Matrix from "../components/Matrix.astro";
     }
 
     .mxlinux-section {
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        background: linear-gradient(
+            135deg,
+            #1a1a2e 0%,
+            #16213e 50%,
+            #0f3460 100%
+        );
         padding: clamp(3rem, 8vw, 5rem) 0;
         text-align: center;
     }
@@ -106,7 +111,9 @@ import Matrix from "../components/Matrix.astro";
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        transition: background 0.2s, transform 0.15s;
+        transition:
+            background 0.2s,
+            transform 0.15s;
     }
 
     .mxlinux-link:hover {
